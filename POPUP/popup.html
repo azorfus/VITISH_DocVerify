@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PII Detected</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3F3A3A;
+            color: #A29C9C;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup {
+            width: 350px;
+            padding: 30px;
+            text-align: center;
+            background-color: #292424;
+            border: 2px solid white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        h2 { color: white; font-size: 1.5rem; margin-bottom: 15px; }
+        p { font-size: 1.1rem; margin-bottom: 20px; color: #A29C9C; }
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            background-color: #000000;
+            color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <h2>PII Detected!</h2>
+        <p>There is Personally Identifiable Information in this document!</p>
+        <p>Would you like to?</p>
+        <button id="remove">Remove PII</button>
+        <button id="mask">Mask PII</button>
+        <button id="keep">Keep PII</button>
+    </div>
+
+</body>
+</html>

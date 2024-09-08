@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PII Detected</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282828; /* Dark background */
+            color: #fbf1c7; /* Light text for dark mode */
+            height: 100vh;
+        }
+
+        /* Overlay to cover the entire screen */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(40, 40, 40, 0.95); /* Slightly transparent dark overlay */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Popup styling */
+        .popup {
+            width: 350px;
+            padding: 30px;
+            text-align: center;
+            background-color: #3c3836; /* Darker background */
+            border: 2px solid #cc241d; /* Red border */
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            z-index: 20;
+        }
+
+        h2 {
+            color: #cc241d; /* Red title */
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #fbf1c7; /* Light text */
+        }
+
+        /* Special color for "Would you like to?" text */
+        p:nth-of-type(2) {
+            color: #d79921; /* Yellow text for "Would you like to?" */
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            background-color: #098971; /* Button background */
+            color: #ffffff; /* White button text */
+        }
+
+        button:hover {
+            background-color: #006d5b; /* Slightly darker green for hover */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay covering entire viewport -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <h2>PII Detected!</h2>
+            <p>There is Personally Identifiable Information in this document!</p>
+            <p>Would you like to?</p>
+            <button id="remove">Remove PII</button>
+            <button id="mask">Mask PII</button>
+            <button id="keep">Keep PII</button>
+        </div>
+    </div>
+
+    <script>
+        // Action for removing PII
+        document.getElementById('remove').addEventListener('click', () => {
+            alert('Removing PII... Sensitive information has been removed ✅');
+            document.getElementById('overlay').style.display = 'none'; // Close overlay after action
+        });
+
+        // Action for masking PII
+        document.getElementById('mask').addEventListener('click', () => {
+            alert('Masking PII...');
+            document.getElementById('overlay').style.display = 'none'; // Close overlay after action
+        });
+
+        // Action for keeping PII
+        document.getElementById('keep').addEventListener('click', () => {
+            alert('Keeping PII...');
+            document.getElementById('overlay').style.display = 'none'; // Close overlay after action
+        });
+    </script>
+</body>
+</html>
