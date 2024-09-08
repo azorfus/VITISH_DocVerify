@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OCR Extension</title>
+    </head>
+    <body>
+        <input type="file" id="uploadImage" accept="image/png, image/jpeg, image/jpg, application/pdf" />
+        <p id="progress"></p>
+        <p id="outputText"></p>
+        <p id="piiResults"></p>
+        <script src="index.js"></script>
+        <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.7.107/pdf.min.js"></script>
+    </body>
+</html>
